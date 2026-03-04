@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .welcome-message {
+            color: #667eea;
+            font-size: 18px;
+        }
+
+        .profile-info {
+            margin: 30px 0;
+        }
+
+        .info-item {
+            display: flex;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #555;
+            width: 150px;
+        }
+
+        .info-value {
+            color: #333;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .success-icon {
+            text-align: center;
+            font-size: 60px;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="success-icon">✓</div>
+        <div class="header">
+            <h1>Trang cá nhân</h1>
+            <p class="welcome-message">Chào mừng bạn đã đăng nhập thành công!</p>
+        </div>
+
+        <div class="profile-info">
+            <div class="info-item">
+                <span class="info-label">Tên đăng nhập:</span>
+                <span class="info-value">ABC</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Trạng thái:</span>
+                <span class="info-value">Đang hoạt động</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Quyền truy cập:</span>
+                <span class="info-value">Người dùng</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Thời gian đăng nhập:</span>
+                <span class="info-value" id="loginTime"></span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="Login.html" class="btn btn-secondary">Đăng xuất</a>
+        </div>
+    </div>
+
+    <script>
+        // Hiển thị thời gian đăng nhập
+        document.getElementById('loginTime').textContent = new Date().toLocaleString('vi-VN');
+    </script>
+</body>
+</html>
