@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import julian.thSpringBoot.models.SinhVien;
+import hoang.thSpringBoot.models.SinhVien;
 
 @Controller
 public class B2_TruyenDuLieuSangView {
